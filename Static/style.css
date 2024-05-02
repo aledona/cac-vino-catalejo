@@ -1,0 +1,38 @@
+
+:root{
+    --bg-color: #1E1E1E;
+    --primary-color: #383838;
+    --secondary-color: #404040;
+    --third-color: #ffc65c
+    --third-bis-color: #fff7f5
+    --bg-input-color: #f2af5c;
+}
+/* SELECTOR UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+body{
+    background-color:var(--bg-color);
+}
+
+li{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+h2 {
+    color: white!important;
+    font-size: 2vw;
+}
+
+
+#banner{
+    background-image: url('../static/catalejo-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 30vw;
+}
