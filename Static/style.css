@@ -2,12 +2,12 @@
 :root{
     --bg-color: #1E1E1E;
     --primary-color: #383838;
-    --secondary-color: #404040;
-    --third-color: #ffc65c
-    --third-bis-color: #fff7f5
+    --secondary-color: #c8b889;
+    --third-color: #404040;
+    --third-bis-color: #fff7f5;
     --bg-input-color: #f2af5c;
 }
-/* SELECTOR UNIVERSAL */
+
 *{
     margin: 0;
     padding: 0;
@@ -19,20 +19,155 @@ body{
     background-color:var(--bg-color);
 }
 
+a{
+    text-decoration: none;
+}
+
+h2{
+    color: #FFF;
+}
+
+
+.header{
+    background-color: var(--third-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.logo-img{
+    width:150px;
+    height:60px;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.nav-links{
+    list-style: none;    
+    display: flex;
+    gap: 50px;
+    font-size: 13px;
+}
+
+.nav-links a{
+    color: #FFF;
+    font-weight: bold;
+}
+
+.nav-links a:hover{
+    color: var(--secondary-color) ;
+}
+
+
+
 li{
     text-decoration: none;
     color: #FFFFFF;
 }
 
-h2 {
-    color: white!important;
-    font-size: 2vw;
-}
 
 
 #banner{
     background-image: url('../static/catalejo-bg.png');
     background-size: cover;
     background-position: center;
-    height: 30vw;
+    height: 300px;
+    box-shadow:inset 0 0 0 2000px rgb(84 84 84 / 25%);
+}
+
+.banner-card{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 160px;
+    
+}
+
+.banner-card h1{
+    color: #FFF;
+    font-size: 4vw;
+}
+.banner-button {
+    margin: 40px;
+}
+
+.container{
+    max-width: 1200px;
+    /* MARGENES */
+    margin: 120px auto;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: var(--secondary-color);
+
+}
+.btn-secondary{
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bienvenidos{
+    color:#FFF;
+    font-size: 14px;
+    margin:20px;
+}
+
+#footer {
+    background-color: var(--third-color);
+    list-style: none;    
+    display: flex;
+    gap: 50px;
+    font-size: 13px;
+}
+
+#footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color:var(--secondary-color);    
+}
+
+.nav-links{
+    list-style: none;    
+    display: flex;
+    gap: 50px;
+    font-size: 13px;
+}
+
+.nav-links a{
+    color: #FFF;
+    font-weight: bold;
+}
+
+.nav-links a:hover{
+    color: var(--secondary-color) ;
 }
