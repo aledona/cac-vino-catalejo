@@ -41,21 +41,31 @@
     <main>
         <section class="registro">
             <h2>Registro a Finca El Loco</h2>
-            <form action="#">
+            <form action="#" id="formRegister" method="GET" novalidate>
+                
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
-    
+                <div class="error" id="error-nombre"></div>
+
                 <label for="apellido">Apellido</label>
                 <input type="text" id="apellido" name="apellido" required>
-    
+                <div class="error" id="error-apellido"></div>
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+                <div class="error" id="error-email"></div>
     
                 <label for="contrasena">Contraseña</label>
                 <input type="password" id="contrasena" name="contrasena" required>
+                <div class="error" id="error-contrasena"></div>
+
+                <label for="confirmContrasena">Confirmar contraseña</label>
+                <input type="password" id="confirmContrasena" name="confirmContrasena" required>
+                <div class="error" id="error-confirmContrasena"></div>
     
-                <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                <div class="error" id="error-fechaNacimiento"></div>
     
                 <label for="pais">País</label>
                 <select id="pais" name="pais">
@@ -65,8 +75,9 @@
                     <option value="colombia">Colombia</option>
                     <!-- Agrega más opciones según sea necesario -->
                 </select>
+                <div class="error" id="error-pais"></div>
                 <br>
-                <button class="btn-primary" type="submit">Registrarse</button>
+                <button class="btn-primary" type="button" id="btn-send">Registrarse</button>
             </form>
         </section>
     </main>
@@ -80,4 +91,5 @@
             </li>
         </ul>
     </footer>
+    <script src="./Static/js/register.js"></script>
 </body>
