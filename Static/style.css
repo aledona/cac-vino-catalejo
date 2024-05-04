@@ -6,6 +6,7 @@
     --third-color: #404040;
     --third-bis-color: #fff7f5;
     --bg-input-color: #f2af5c;
+    --text-color:#c1c1c1;
 }
 
 *{
@@ -24,7 +25,7 @@ a{
 }
 
 h2{
-    color: #FFF;
+    color: var(--text-color);
 }
 
 
@@ -58,7 +59,7 @@ nav{
 }
 
 .nav-links a{
-    color: #FFF;
+    color: var(--text-color);
     font-weight: bold;
 }
 
@@ -70,18 +71,19 @@ nav{
 
 li{
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 
 
-#banner{
+#banner {
     background-image: url('../static/catalejo-bg.png');
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
-    height: 300px;
-    box-shadow:inset 0 0 0 2000px rgb(84 84 84 / 25%);
+    height: 500px;
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.25);
 }
+
 
 .banner-card{
     margin: 0 auto;
@@ -91,7 +93,7 @@ li{
 }
 
 .banner-card h1{
-    color: #FFF;
+    color: var(--text-color);
     font-size: 4vw;
 }
 .banner-button {
@@ -99,9 +101,8 @@ li{
 }
 
 .container{
-    max-width: 1200px;
-    /* MARGENES */
-    margin: 120px auto;
+    max-width: 1200px;    
+    margin: 20px auto;
 }
 
 .d-flex{
@@ -114,60 +115,118 @@ li{
 .btn-primary{
     background-color: var(--primary-color);
     padding: 10px;
-    color: #FFF;
+    color: var(--text-color);
     border-radius: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 .btn-primary:hover{
     background-color: var(--secondary-color);
-
+    color: #383838;
 }
 .btn-secondary{
     background-color: var(--primary-color);
     padding: 10px;
-    color: #FFF;
+    color: var(--text-color);
     border-radius: 10px;
     cursor: pointer;
 }
 
-.bienvenidos{
-    color:#FFF;
-    font-size: 14px;
-    margin:20px;
+.bienvenidos {
+    display: flex;
+    align-items: center; 
 }
 
-#footer {
+.column-left {
+    padding: 30px;
+}
+
+.column-right {
+    padding: 30px;
+    background-color:var(--third-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+}
+.bienvenidos h1 {
+    display: inline;
+    color:var(--secondary-color);
+    font-size: 42px;
+}
+
+/* .img-bodega{
+    width: 100%;
+    opacity: 0.1;
+    background-color: #000000;
+} */
+#bodega {
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.img-bodega {
+    width: 100%;
+    opacity: 0.1;
+    background-color: #000000;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    
+}
+
+
+.footer {
     background-color: var(--third-color);
     list-style: none;    
     display: flex;
     gap: 50px;
     font-size: 13px;
+    padding: 20px;
+    justify-content: right;
 }
 
-#footer a {
-    color: white;
+.footer a {
+    color: var(--text-color);
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 30px;
     text-decoration: none;
 }
 
-#footer a:hover {
+
+.footer a:hover {
     color:var(--secondary-color);    
 }
 
-.nav-links{
-    list-style: none;    
-    display: flex;
-    gap: 50px;
-    font-size: 13px;
-}
-
-.nav-links a{
-    color: #FFF;
-    font-weight: bold;
-}
-
-.nav-links a:hover{
-    color: var(--secondary-color) ;
-}
