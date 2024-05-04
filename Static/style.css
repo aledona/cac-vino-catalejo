@@ -70,7 +70,10 @@ nav{
     color: var(--primary-color) ;
 }
 
-
+.nav-links a.menu-selected{
+    color:var(--primary-color);
+    font-weight: bold;
+}
 
 li{
     text-decoration: none;
