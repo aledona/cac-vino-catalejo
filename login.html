@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="Static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../Static/style.css">
 </head>
+
 <body>
     <header class="header">
         <nav>
@@ -30,13 +31,24 @@
                     <a href="./register.html">Registrarse</a>
                 </li>
                 <li>
-                    <a href="./login.html" >Iniciar sesión</a>
+                    <a href="./login.html">Iniciar sesión</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        
+        <section class="registro">
+            <h2>Ingresar a Finca El Loco</h2>
+            <form action="#">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <br>
+                <button class="btn-primary" type="submit">Ingresar</button>
+            </form>
+        </section>
     </main>
     <footer class="footer">
         <ul class="nav-links">
@@ -52,4 +64,3 @@
         </ul>
     </footer>
 </body>
-

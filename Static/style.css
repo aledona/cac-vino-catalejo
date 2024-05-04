@@ -1,12 +1,15 @@
 
 :root{
     --bg-color: #1E1E1E;
-    --primary-color: #383838;
-    --secondary-color: #c8b889;
+    /* --primary-color: #383838;
+    --secondary-color: #c8b889; */
+    --primary-color: #c8b889;
+    --secondary-color: #383838;
     --third-color: #404040;
     --third-bis-color: #fff7f5;
     --bg-input-color: #f2af5c;
     --text-color:#c1c1c1;
+    --btn-text-color:#383838;
 }
 
 *{
@@ -64,7 +67,7 @@ nav{
 }
 
 .nav-links a:hover{
-    color: var(--secondary-color) ;
+    color: var(--primary-color) ;
 }
 
 
@@ -115,17 +118,18 @@ li{
 .btn-primary{
     background-color: var(--primary-color);
     padding: 10px;
-    color: var(--text-color);
+    color: var(--btn-text-color);
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    border: none;
 }
 .btn-primary:hover{
     background-color: var(--secondary-color);
-    color: #383838;
+    color: var(--primary-color);
 }
 .btn-secondary{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 10px;
     color: var(--text-color);
     border-radius: 10px;
@@ -152,7 +156,7 @@ li{
 }
 .bienvenidos h1 {
     display: inline;
-    color:var(--secondary-color);
+    color:var(--primary-color);
     font-size: 42px;
 }
 
@@ -230,5 +234,45 @@ li{
 }
 
 .footer a:hover {
-    color: var(--secondary-color);    
+    color: var(--primary-color);    
+}
+
+.registro {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color:var(--third-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-top: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input:focus,
+select:focus {
+    border: 2px solid var(--primary-color); 
+    outline: none; 
 }
