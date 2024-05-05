@@ -1,6 +1,0 @@
-Codo a codo:
-
-Usuario: deyna92@gmail.com
-Contraseña: Katzenbach77273122+
-
- fontawesome: <script src="https://kit.fontawesome.com/78f71e24c7.js" crossorigin="anonymous"></script>
