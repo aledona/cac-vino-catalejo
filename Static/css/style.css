@@ -325,3 +325,38 @@ select:focus {
 .error{
     color:rgb(197, 86, 86)
 }
+
+#banner-varietales{
+    background-image: url('../../static/img/catalejo-bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 500px;
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.25);
+}
+
+#varietales-home{
+display: flex;
+align-items: center; 
+}
+
+.column-left-v {
+padding: 30px;
+
+}
+
+.column-right-v {
+padding: 30px;
+background-color:var(--third-color);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+text-align: left;
+font-size: 16px;
+color: var(--text-color);
+
+}
+
+#varietales-home h3 {
+display: inline;
+color:var(--primary-color);
+font-size: 42px;
+}
