@@ -360,3 +360,8 @@ display: inline;
 color:var(--primary-color);
 font-size: 42px;
 }
+#nuestrosvinos-home{
+    display: flex;
+    align-items: center; 
+
+}
