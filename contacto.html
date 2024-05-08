@@ -16,9 +16,15 @@
                     <img src="Static/img/logo.png" alt="Finca el loco" class="logo-img">
                 </a>
             </div>
-            <ul class="nav-links">
+            <!-- Icono de hamburguesa -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li>
-                    <a href="./index.html">Inicio</a>
+                    <a href="./index.html" class="menu-selected">Inicio</a>
                 </li>
                 <li>
                     <a href="./nuestros-vinos.html">Nuestros vinos</a>
@@ -27,13 +33,13 @@
                     <a href="./varietales.html">Varietales</a>
                 </li>
                 <li>
-                    <a href="./contacto.html" class="menu-selected">Contacto</a>
+                    <a href="./contacto.html">Contacto</a>
                 </li>
                 <li>
                     <a href="./register.html">Registrarse</a>
                 </li>
                 <li>
-                    <a href="./login.html" >Iniciar sesión</a>
+                    <a href="./login.html">Iniciar sesión</a>
                 </li>
             </ul>
         </nav>
@@ -45,11 +51,10 @@
         <div>
             <p>Finca El Loco® todos los derechos reservados. </p>
         </div>
-        <ul class="nav-links">
-            <li>
-                <a href="register.html">Unite a nuestro Club Catalejo</a>
-            </li>
-        </ul>
     </footer>
+    <button onclick="scrollToTop()" id="btnVolverArriba" title="Volver arriba">↑</button>
+
+    <script src="./Static//js/flotante.js"></script>
+    <script src="./Static//js/menu.js"></script>
 </body>
 
