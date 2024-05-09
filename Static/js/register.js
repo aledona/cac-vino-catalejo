@@ -1,5 +1,17 @@
 let btnSend = document.querySelector('#btn-send');
 const regex = /@.*\.[a-zA-Z]+$/;
+class Usuario{
+
+    constructor(nombre,apellido,email,contrasena,fechaNacimiento,pais){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.email=email;
+        this.contrasena=contrasena;
+        this.fechaNacimiento=fechaNacimiento;
+        this.pais=pais;
+    }
+}
+
 
 btnSend.addEventListener('click',function(){
     let nombre = document.querySelector('#nombre');    
@@ -78,14 +90,22 @@ btnSend.addEventListener('click',function(){
     }
 
     if (errorNombre.innerHTML === '' && errorApellido.innerHTML === '' && errorEmail.innerHTML === '' && errorContrasena.innerHTML === '' && errorConfirmContrasena.innerHTML === '' && errorFechaNacimiento.innerHTML === '' && errorPais.innerHTML === '') {
-        let usuario = {
-            email: email.value.trim(),
-            contrasena: contrasena.value.trim()
-        };
-        let usuarioJSON = JSON.stringify(usuario);
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-        localStorage.setItem('usuario', usuarioJSON);
-        alert('¡Registro exitoso! Usuario y contraseña guardados en localStorage.');
+        const newUsuario = new Usuario (
+            nombre.value.trim(),
+            nombre.value.trim(),
+            email.value.trim(),
+            contrasena.value.trim(),
+            fechaNacimiento.value.trim(),
+            pais.value.trim()
+        );
+        
+        usuarios.push(newUsuario);
+        localStorage.setItem('usuarios', JSON.stringify(newUsuario));
+
+
+        alert('¡Registro exitoso! Ya puede loguearse.');
         
         nombre.value = '';
         apellido.value = '';
