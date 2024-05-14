@@ -354,7 +354,7 @@ select:focus {
 }
 
 #banner-varietales {
-    background-image: url('../../static/img/catalejo-bg.png');
+    background-image: url('https://aledona.github.io/cac-vino-catalejo/Static/img/catalejo-bg.png');
     background-size: 100% 100%;
     background-position: center;
     height: 500px;
