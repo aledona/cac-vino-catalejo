@@ -28,7 +28,6 @@ btnSend.addEventListener('click', function() {
 
   let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-  // Verificar si `usuarios` es un array y convertirlo si es necesario
   if (!Array.isArray(usuarios)) {
     usuarios = [usuarios];
   }

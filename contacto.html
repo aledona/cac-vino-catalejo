@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="Static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../Static/css/style.css">
 </head>
-<body id="body-contacto" class="d-flex">
+<body>
     <header class="header">
         <nav>
             <div id="logo">
@@ -16,7 +16,6 @@
                     <img src="Static/img/logo.png" alt="Finca el loco" class="logo-img">
                 </a>
             </div>
-            <!-- Icono de hamburguesa -->
             <div class="menu-icon" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -45,7 +44,7 @@
         </nav>
     </header>
     <main>
-        <section class="contacto">
+        <section class="formulario">
             <h2 class="d-flex">¡Contactanos!</h2>
             <form action="#" id="formRegister" method="GET" novalidate>
                 
@@ -61,19 +60,13 @@
                 <input type="email" id="email" name="email" required>
                 <div class="error" id="error-email"></div>
     
-                <label for="phonenumber">Número de teléfono</label>
-                <input type="number" id="Number" name="Número de Teléfono" required>
-                <div class="error" id="error-numerotelefono"></div>
+                <label for="nrotelefono">Número de teléfono</label>
+                <input type="number" id="nrotelefono" name="Número de Teléfono" required>
+                <div class="error" id="error-nrotelefono"></div>
     
-                <label for="pais">País</label>
-                <select id="pais" name="pais">
-                    <option value="argentina">Argentina</option>
-                    <option value="brasil">Brasil</option>
-                    <option value="chile">Chile</option>
-                    <option value="colombia">Colombia</option>
-                    <!-- Agrega más opciones según sea necesario -->
-                </select>
-                <div class="error" id="error-pais"></div>
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" cols="40" rows="5" id="mensaje"></textarea>
+                <div class="error" id="error-mensaje"></div>
                 <br>
                 <button class="btn-primary" type="button" id="btn-send">Enviar</button>
             </form>
@@ -87,7 +80,7 @@
     </footer>
     
     <button onclick="scrollToTop()" id="btnVolverArriba" title="Volver arriba">↑</button>
-    <script src="./Static/js/register.js"></script>
+    <script src="./Static/js/contacto.js"></script>
     <script src="./Static//js/flotante.js"></script>
     <script src="./Static//js/menu.js"></script>
 </body>

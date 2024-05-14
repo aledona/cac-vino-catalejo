@@ -285,7 +285,7 @@ li {
     color: var(--primary-color);
 }
 
-.registro {
+.formulario {
     width: 500px;
     margin: 0 auto;
     padding: 30px;
@@ -691,7 +691,7 @@ select:focus {
     .img-vino{
         width: 360px;
     }
-    .registro{
+    .formulario{
         width: 80%;
     }
     .contacto{
