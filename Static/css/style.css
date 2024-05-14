@@ -492,9 +492,6 @@ select:focus {
         font-size: 16px;
     }
 
-
-
-
     .menu-icon {
         display: block; 
     }
@@ -530,6 +527,65 @@ select:focus {
     .registro{
         width: 80%;
     }
+
+    #varietales-home {
+        flex-direction: column;
+    }
+
+    .column-left-v,
+    .column-right-v {
+        padding: 15px;
+    }
+
+    .column-right-v {
+        border-radius: 0px;
+        font-size: 6px;
+    }
+
+    .column-left-v {
+        order: 1;
+    }
+
+    .column-right-v{
+        order: 2;
+    }
+
+    .column-right-v p {
+        font-size: 16px;
+    }
+
+    #varietales-home h1 {
+        font-size: 32px;
+    }
+
+    #banner-varietales {
+        height: 320px;
+        box-shadow: inset 0 0 0 2000px #00000073;
+    }
+
+    #banner-varietales-first {
+        padding: 24px;
+        align-items: center;
+    }
+
+    #banner-varietales-first h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .banner-button {
+        margin: 15px auto;
+        align-items: center;
+    }
+
+    #banner-varietales h2 {
+        font-size: 1.8rem;
+    }
+
+    .banner-button {
+        font-size: 14px;
+    }
+
 }
 
 @media only screen and (max-width: 820px) {
@@ -551,7 +607,7 @@ select:focus {
     .column-left {
         order: 2;
     }
-
+    
     .column-right p {
         font-size: 16px;
     }
@@ -603,9 +659,6 @@ select:focus {
         font-size: 16px;
     }
 
-
-
-
     .menu-icon {
         display: block; /* Mostrar en dispositivos móviles */
     }
@@ -645,5 +698,66 @@ select:focus {
         width: 70%  
 
     }
+
+    #varietales-home {
+        flex-direction: column;
+    }
+
+    .column-left-v,
+    .column-right-v {
+        padding: 15px;
+    }
+
+    .column-right-v {
+        border-radius: 0px;
+        font-size: 6px;
+    }
+
+    .column-left-v {
+        order: 1;
+    }
+
+    .column-right-v{
+        order: 2;
+        text-align: center;
+    }
+
+    .column-right-v p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #varietales-home h1 {
+        font-size: 32px;
+    }
+
+    #banner-varietales {
+        height: 320px;
+        box-shadow: inset 0 0 0 2000px #00000073;
+    }
+
+    #banner-varietales-first {
+        padding: 24px;
+        text-align: center;
+    }
+
+    .banner-button {
+        margin: 14px auto;
+    }
+
+    #banner-varietales-first h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    #banner-varietales h2 {
+        font-size: 1.8rem;
+    }
+
+    .banner-button {
+        font-size: 14px;
+    }
+
 }
 
