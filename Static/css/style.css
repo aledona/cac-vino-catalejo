@@ -106,7 +106,7 @@ li {
 
 
 #banner {
-    background-image: url('../../static/img/catalejo-bg.png');
+    background-image: url('https://aledona.github.io/cac-vino-catalejo/Static/img/catalejo-bg.png');
     background-size: 100% 100%;
     background-position: center;
     height: 500px;
@@ -285,7 +285,7 @@ li {
     color: var(--primary-color);
 }
 
-.registro {
+.formulario {
     width: 500px;
     margin: 0 auto;
     padding: 30px;
@@ -354,7 +354,7 @@ select:focus {
 }
 
 #banner-varietales {
-    background-image: url('../../static/img/catalejo-bg.png');
+    background-image: url('https://aledona.github.io/cac-vino-catalejo/Static/img/catalejo-bg.png');
     background-size: 100% 100%;
     background-position: center;
     height: 500px;
@@ -413,13 +413,7 @@ select:focus {
     margin-bottom: 30px;
 }
 
-#body-contacto{
-    background-image: url('../../static/img/catalejo-bg.png');
-    background-size: 100% 100%;
-    background-position: center;
-    height: 50vw;
-    box-shadow: inset 0 0 0 2000px rgba(49, 49, 49, 0.25);
-}
+
 
 @media only screen and (max-width: 412px) {
     .bienvenidos {
@@ -691,7 +685,7 @@ select:focus {
     .img-vino{
         width: 360px;
     }
-    .registro{
+    .formulario{
         width: 80%;
     }
     .contacto{
