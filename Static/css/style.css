@@ -50,9 +50,8 @@ h2 {
     width: 100%;
     z-index: 9999;
 }
-/* Estilos para el icono de hamburguesa */
 .menu-icon {
-    display: none; /* Ocultar por defecto en pantallas grandes */
+    display: none; 
     cursor: pointer;
 }
 
@@ -238,7 +237,6 @@ li {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Add semi-transparent background */
 }
 
 .text {
@@ -441,6 +439,35 @@ select:focus {
     box-shadow: inset 0 0 0 2000px rgba(49, 49, 49, 0.25);
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px; 
+}
+
+/* .sexo-container input[type="radio"] {
+    display: inline-block;
+} */
+.sexo-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sexo-options {
+    display: flex;
+    gap: 0px; 
+}
+
+.sexo-options label {
+    margin-left: 20px; 
+}
 @media only screen and (max-width: 412px) {
     .bienvenidos {
         flex-direction: column;
@@ -684,11 +711,11 @@ select:focus {
     }
 
     .menu-icon {
-        display: block; /* Mostrar en dispositivos móviles */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Ocultar por defecto en dispositivos móviles */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -696,7 +723,7 @@ select:focus {
         width: 100%;
         background-color: var(--third-color);
         padding: 10px 0;
-        z-index: 999; /* Asegurar que esté por encima del contenido */
+        z-index: 999; 
     }
 
     .nav-links li {

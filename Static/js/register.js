@@ -2,9 +2,10 @@ let btnSend = document.querySelector('#btn-send');
 const regex = /@.*\.[a-zA-Z]+$/;
 class Usuario{
 
-    constructor(nombre,apellido,email,contrasena,fechaNacimiento,pais){
+    constructor(nombre,apellido,sexo, email,contrasena,fechaNacimiento,pais){
         this.nombre=nombre;
         this.apellido=apellido;
+        this.sexo=sexo;
         this.email=email;
         this.contrasena=contrasena;
         this.fechaNacimiento=fechaNacimiento;
@@ -21,6 +22,9 @@ btnSend.addEventListener('click',function(){
     let confirmContrasena = document.querySelector('#confirmContrasena');   
     let fechaNacimiento = document.querySelector('#fechaNacimiento');  
     let pais = document.querySelector('#pais');  
+    let sexoMasculino = document.querySelector('#masculino');
+    let sexoFemenino = document.querySelector('#femenino');
+    let terminosYCondiciones = document.querySelector('#tyc');
 
     let errorNombre = document.querySelector('#error-nombre');
     let errorApellido = document.querySelector('#error-apellido');
@@ -29,6 +33,8 @@ btnSend.addEventListener('click',function(){
     let errorConfirmContrasena = document.querySelector('#error-confirmContrasena');
     let errorFechaNacimiento = document.querySelector('#error-fechaNacimiento');
     let errorPais = document.querySelector('#error-pais');
+    let errorSexo = document.querySelector('#error-sexo');
+    let errorTyc = document.querySelector('#error-tyc');
     
 
     if(nombre.value.trim()==''){       
@@ -88,12 +94,27 @@ btnSend.addEventListener('click',function(){
         errorPais.innerHTML = '';
     }
 
-    if (errorNombre.innerHTML === '' && errorApellido.innerHTML === '' && errorEmail.innerHTML === '' && errorContrasena.innerHTML === '' && errorConfirmContrasena.innerHTML === '' && errorFechaNacimiento.innerHTML === '' && errorPais.innerHTML === '') {
+    if (!sexoMasculino.checked && !sexoFemenino.checked) {
+        errorSexo.innerHTML = 'Debes seleccionar tu sexo';
+    } else {
+        errorSexo.innerHTML = '';
+    }
+
+    if (!terminosYCondiciones.checked) {
+        errorTyc.innerHTML = 'Debes aceptar los Términos y Condiciones';
+    } else {
+        errorTyc.innerHTML = '';
+    }
+
+    if (errorTyc.innerHTML === '' && errorSexo.innerHTML === '' && errorNombre.innerHTML === '' && errorApellido.innerHTML === '' && errorEmail.innerHTML === '' && errorContrasena.innerHTML === '' && errorConfirmContrasena.innerHTML === '' && errorFechaNacimiento.innerHTML === '' && errorPais.innerHTML === '') {
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        
+        const sexo = sexoMasculino.checked ? 'Masculino' : 'Femenino';
 
         const newUsuario = new Usuario (
             nombre.value.trim(),
             nombre.value.trim(),
+            sexo,
             email.value.trim(),
             contrasena.value.trim(),
             fechaNacimiento.value.trim(),
@@ -105,7 +126,7 @@ btnSend.addEventListener('click',function(){
         }
 
         usuarios.push(newUsuario);
-        localStorage.setItem('usuarios', JSON.stringify(newUsuario));
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
 
         alert('¡Registro exitoso! Ya puede loguearse.');
@@ -117,6 +138,9 @@ btnSend.addEventListener('click',function(){
         confirmContrasena.value = '';
         fechaNacimiento.value = '';
         pais.value = '';
+        sexoMasculino.checked = false;
+        sexoFemenino.checked = false;
+        terminosYCondiciones.checked = false;
     }
 })
 

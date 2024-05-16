@@ -56,6 +56,32 @@
                 <input type="text" id="apellido" name="apellido" required>
                 <div class="error" id="error-apellido"></div>
 
+                <!-- <p style="margin-top: 10px;">Sexo</p>
+                <div class="sexo-container">
+                    <label for="masculino">
+                        <input type="radio" id="masculino" name="masculino" value="MASCULINO">
+                        Masculino
+                    </label>
+                    <label for="femenino">
+                        <input type="radio" id="femenino" name="femenino" value="FEMENINO">
+                        Femenino
+                    </label>
+                </div> -->
+                <div class="sexo-container">
+                    <label for="sexo">Sexo</label>
+                    <div class="sexo-options">
+                        <label for="masculino">
+                            <input type="radio" id="masculino" name="fav_language" value="MASCULINO">
+                            Masculino
+                        </label>
+                        <label for="femenino">
+                            <input type="radio" id="femenino" name="fav_language" value="FEMENINO">
+                            Femenino
+                        </label>
+                    </div>
+                </div>
+                <div class="error" id="error-sexo"></div>
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 <div class="error" id="error-email"></div>
@@ -80,6 +106,12 @@
                     <option value="colombia">Colombia</option>
                 </select>
                 <div class="error" id="error-pais"></div>
+               
+                <div class="checkbox-container">
+                    <input type="checkbox" id="tyc" name="tyc">
+                    <label for="tyc">Acepto los Términos y Condiciones</label>
+                </div>
+                <div class="error" id="error-tyc"></div>
                 <br>
                 <button class="btn-primary" type="button" id="btn-send">Registrarse</button>
             </form>
