@@ -110,6 +110,7 @@ nav {
         100% { transform: translate(0,0) rotate(0deg);}
     }
 
+
 li {
     text-decoration: none;
     color: var(--text-color);

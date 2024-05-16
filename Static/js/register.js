@@ -74,7 +74,6 @@ btnSend.addEventListener('click',function(){
         let fechaNacimientoUsuario = new Date(fechaNacimiento.value);
         let mayorEdad = new Date();
         mayorEdad.setFullYear(mayorEdad.getFullYear() - 18);
-        // Comparar la fecha de nacimiento con la fecha hace 18 años
         if (fechaNacimientoUsuario > mayorEdad) {    
             document.querySelector('#error-fechaNacimiento').innerHTML = 'Debes ser mayor de 18 años para registrarte';
         } else {
@@ -101,6 +100,10 @@ btnSend.addEventListener('click',function(){
             pais.value.trim()
         );
         
+        if (!Array.isArray(usuarios)) {
+            usuarios = [];
+        }
+
         usuarios.push(newUsuario);
         localStorage.setItem('usuarios', JSON.stringify(newUsuario));
 
