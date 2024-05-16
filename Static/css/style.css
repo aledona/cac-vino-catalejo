@@ -41,6 +41,7 @@ h2 {
 }
 
 
+
 .header {
     background-color: var(--third-color);
     position: sticky;
@@ -62,6 +63,7 @@ h2 {
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
 }
+
 
 .logo-img {
     width: 150px;
@@ -426,6 +428,11 @@ select:focus {
     margin-bottom: 30px;
 }
 
+.img-nv{
+    width: 300px; 
+    height: 300px;
+}
+
 #body-contacto{
     background-image: url('https://aledona.github.io/cac-vino-catalejo/Static/img/catalejo-bg.png');
     background-size: 100% 100%;
@@ -544,7 +551,9 @@ select:focus {
     #varietales-home {
         flex-direction: column;
     }
-
+    #nuestros-vinos {
+        flex-direction: column;
+    }
     .column-left-v,
     .column-right-v {
         padding: 15px;
