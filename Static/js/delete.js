@@ -47,21 +47,6 @@ async function enviar() {
     errorContrasena.innerHTML = "";
   }
 
-  // let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  // if (!Array.isArray(usuarios)) {
-  //   usuarios = [usuarios];
-  // }
-
-  // let usuarioEncontrado = false;
-  // let nombre;
-
-  // usuarios.forEach((usuario) => {
-  //   if (usuario.email === email && usuario.contrasena === contrasena) {
-  //     usuarioEncontrado = true;
-  //     nombre = usuario.nombre;
-  //   }
-  // });
   const userData = {
     email: email,
     password: contrasena,
@@ -70,18 +55,9 @@ async function enviar() {
   user = await fetchData(BASEURL + "/api/users/login", "POST", userData);
 
   if (user != undefined) {
-    alert("Bienvenido " + user.firstname + "!");
-    result = await fetchData(`${BASEURL}/api/users/${user.id}`, "PUT");
-
-    localStorage.setItem("usuario", JSON.stringify(user));
-    window.location.href = "index.html";
+    result = await fetchData(`${BASEURL}/api/users/${user.id}`, "DELETE");
+    alert("Se eliminó el usuario de  " + user.firstname + "!");
   }
-
-  //   if (usuarioEncontrado) {
-  //     alert("Bienvenido " + nombre + "!");
-  //   } else {
-  //     alert("Usuario o contraseña incorrectos");
-  //   }
 }
 
 btnSend.addEventListener("click", function () {

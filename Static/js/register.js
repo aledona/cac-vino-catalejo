@@ -175,9 +175,6 @@ btnSend.addEventListener("click", function () {
     }
     result = fetchData(`${BASEURL}/api/users/`, "POST", newUsuario);
 
-    usuarios.push(newUsuario);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
     alert("¡Registro exitoso! Ya puede loguearse.");
 
     nombre.value = "";
