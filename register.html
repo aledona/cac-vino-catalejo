@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <nav>
@@ -24,7 +25,7 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li>
-                    <a href="./index.html" >Inicio</a>
+                    <a href="./index.html">Inicio</a>
                 </li>
                 <li>
                     <a href="./nuestros-vinos.html">Nuestros vinos</a>
@@ -34,6 +35,9 @@
                 </li>
                 <li>
                     <a href="./contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="./delete.html">delete</a>
                 </li>
                 <li>
                     <a href="./register.html" class="menu-selected">Registrarse</a>
@@ -48,7 +52,7 @@
         <section class="formulario">
             <h2>Registro a Finca El Loco</h2>
             <form action="#" id="formRegister" method="GET" novalidate>
-                
+
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <div class="error" id="error-nombre"></div>
@@ -86,7 +90,7 @@
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 <div class="error" id="error-email"></div>
-    
+
                 <label for="contrasena">Contraseña</label>
                 <input type="password" id="contrasena" name="contrasena" required>
                 <div class="error" id="error-contrasena"></div>
@@ -94,20 +98,23 @@
                 <label for="confirmContrasena">Confirmar contraseña</label>
                 <input type="password" id="confirmContrasena" name="confirmContrasena" required>
                 <div class="error" id="error-confirmContrasena"></div>
-    
+
                 <label for="fechaNacimiento">Fecha de Nacimiento</label>
                 <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
                 <div class="error" id="error-fechaNacimiento"></div>
-    
+
                 <label for="pais">País</label>
-                <select id="pais" name="pais">
+                <!-- <select id="pais" name="pais">
                     <option value="argentina">Argentina</option>
                     <option value="brasil">Brasil</option>
                     <option value="chile">Chile</option>
                     <option value="colombia">Colombia</option>
+                </select> -->
+                <select id="countryDropdown">
+                    <option value="" disabled selected>Select a country</option>
                 </select>
                 <div class="error" id="error-pais"></div>
-               
+
                 <div class="checkbox-container">
                     <input type="checkbox" id="tyc" name="tyc">
                     <label for="tyc">Acepto los Términos y Condiciones</label>
@@ -124,7 +131,7 @@
         </div>
 
     </footer>
-    
+
     <button onclick="scrollToTop()" id="btnVolverArriba" title="Volver arriba">↑</button>
     <script src="Static/js/register.js"></script>
     <script src="Static/js/flotante.js"></script>

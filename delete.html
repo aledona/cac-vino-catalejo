@@ -25,7 +25,7 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li>
-                    <a href="./index.html">Inicio</a>
+                    <a href="./index.html" class="menu-selected">Inicio</a>
                 </li>
                 <li>
                     <a href="./nuestros-vinos.html">Nuestros vinos</a>
@@ -34,47 +34,32 @@
                     <a href="./varietales.html">Varietales</a>
                 </li>
                 <li>
-                    <a href="./contacto.html" class="menu-selected">Contacto</a>
+                    <a href="./contacto.html">Contacto</a>
                 </li>
                 <li>
-                    <a href="./delete.html">delete</a>
+                    <a href="./delete.html" class="menu-selected">delete</a>
                 </li>
                 <li>
                     <a href="./register.html">Registrarse</a>
                 </li>
                 <li>
-                    <a href="./login.html">Iniciar sesión &nbsp;<i class="fa-solid fa-user"></i></a>
+                    <a href="./login.html">Iniciar sesión &nbsp; <i class="fa-solid fa-user"></i> </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="formulario">
-            <h2 class="d-flex">¡Contactanos!</h2>
-            <form action="#" id="formRegister" method="GET" novalidate>
-
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <div class="error" id="error-nombre"></div>
-
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" required>
-                <div class="error" id="error-apellido"></div>
-
+            <h2>Ingresar a Finca El Loco</h2>
+            <form action="#">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 <div class="error" id="error-email"></div>
-
-                <label for="nrotelefono">Número de teléfono</label>
-                <input type="number" id="nrotelefono" name="Número de Teléfono" required>
-                <div class="error" id="error-nrotelefono"></div>
-
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" cols="40" rows="5" id="mensaje"></textarea>
-                <div class="error" id="error-mensaje"></div>
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <div class="error" id="error-contrasena"></div>
                 <br>
-                <button class="btn-primary" type="button" id="btn-send">Enviar &nbsp; <i
-                        class="fa-solid fa-paper-plane"></i> </button>
+                <button class="btn-primary" type="button" id="btn-send">Ingresar</button>
             </form>
         </section>
     </main>
@@ -82,11 +67,9 @@
         <div>
             <p>Finca El Loco® todos los derechos reservados. </p>
         </div>
-
     </footer>
-
     <button onclick="scrollToTop()" id="btnVolverArriba" title="Volver arriba">↑</button>
-    <script src="Static/js/contacto.js"></script>
-    <script src="Static//js/flotante.js"></script>
-    <script src="Static//js/menu.js"></script>
+    <script src="Static/js/login.js"></script>
+    <script src="Static/js/flotante.js"></script>
+    <script src="Static/js/menu.js"></script>
 </body>
