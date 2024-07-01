@@ -13,7 +13,8 @@ async function fetchData(url, method, data = null) {
   try {
     const response = await fetch(url, options); // Realiza la petición fetch
     if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
+      alert("Usuario no encontrado.");
+      return;
     }
     return await response.json(); // Devuelve la respuesta en formato JSON
   } catch (error) {
@@ -55,8 +56,17 @@ async function enviar() {
   user = await fetchData(BASEURL + "/api/users/login", "POST", userData);
 
   if (user != undefined) {
-    result = await fetchData(`${BASEURL}/api/users/${user.id}`, "DELETE");
-    alert("Se eliminó el usuario de  " + user.firstname + "!");
+    const confirmDelete = confirm(
+      `¿Estás seguro de que deseas eliminar el usuario ${user.firstname}?`
+    );
+    if (confirmDelete) {
+      result = await fetchData(`${BASEURL}/api/users/${user.id}`, "DELETE");
+      alert("Se eliminó el usuario de  " + user.firstname + "!");
+      logout();
+      window.location.href = "index.html";
+    } else {
+      alert("Eliminación cancelada.");
+    }
   }
 }
 

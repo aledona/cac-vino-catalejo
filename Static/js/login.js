@@ -13,7 +13,8 @@ async function fetchData(url, method, data = null) {
   try {
     const response = await fetch(url, options); // Realiza la petición fetch
     if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
+      alert("Usuario no encontrado.");
+      return;
     }
     return await response.json(); // Devuelve la respuesta en formato JSON
   } catch (error) {

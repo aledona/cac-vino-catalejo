@@ -21,7 +21,7 @@ function updateNavBar() {
                 <a href="./contacto.html">Contacto</a>
             </li>
             <li>
-                <a href="./delete.html">Dar de baja</a>
+                <a href="./delete.html" class="baja">Dar de baja</a>
             </li>
             <li>
                 <span>Hola ${user.firstname}!</span>
